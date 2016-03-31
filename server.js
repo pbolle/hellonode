@@ -1,6 +1,9 @@
 var http = require('http');
 var os = require('os');
 var counter = 0;
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
 function getIPAddress() {
   var interfaces = os.networkInterfaces();
   var ips = "[";
@@ -27,4 +30,4 @@ var handleRequest = function(request, response) {
   counter++;
 }
 var www = http.createServer(handleRequest);
-www.listen(8080);
+www.listen(port, ip);
