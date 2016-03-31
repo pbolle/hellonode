@@ -1,0 +1,26 @@
+{
+  "name": "hellonode",
+  "version": "v2",
+  "description": "Node.js sample app",
+  "main": "server.js",
+  "dependencies": {
+      "express": "*",
+      "mongodb": "*",
+      "ejs": "*"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbolle/hellonode.git"
+  },
+  "author": "Jan-Philipp Bolle <pbolle@gmx.de>",
+  "bugs": {
+    "url": "https://github.com/pbolle/hellonode/issues"
+  }
+}
