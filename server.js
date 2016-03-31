@@ -26,6 +26,10 @@ var handleRequest = function(request, response) {
   response.end("Host info for:" + os.hostname() +
                 "\n ip:" + getIPAddress() +
                 "\n pid:" + process.pid +
+                "\n operating system release:" + os.release() +
+                "\n memory im MB:" + os.totalmem() / (1024 * 1024) +
+                "\n uptime:" + os.uptime() +
+                "\n loadavg:" + JSON.stringify(os.loadavg(), null, 2) +
                 "\n env:" + JSON.stringify(process.env, null, 2));
   counter++;
 }
